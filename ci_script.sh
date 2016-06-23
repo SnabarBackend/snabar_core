@@ -21,5 +21,5 @@ then
     echo "$(tput setaf 1)Starting new Docker image $(tput sgr0)"
 fi
 
-
+docker cp snabar-core-service:/snabar_core/coverage.xml ./
 echo "$(tput setaf 2)Deployed Coming-Soon \n Please visit http://snabar.com $(tput sgr0)"
