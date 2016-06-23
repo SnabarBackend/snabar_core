@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-docker ps -q -a | xargs docker rm
-docker rmi $(docker images | grep “^<none>” | awk ‘{print $3}’)
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 docker build -t snabar/core-service .
 echo "$(tput setaf 2)Building image $(tput sgr0)"
     docker stop snabar-core-service
