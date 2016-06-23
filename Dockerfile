@@ -12,7 +12,9 @@ ENV GOPATH=/snabar_core/
 
 RUN go get
 
-RUN go get -u github.com/axw/gocov
+RUN go get github.com/axw/gocov
+
+RUN go install github.com/axw/gocov
 
 RUN go get -u github.com/AlekSi/gocov-xml
 
