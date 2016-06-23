@@ -16,4 +16,6 @@ RUN go get -u github.com/axw/gocov
 
 RUN go get -u github.com/AlekSi/gocov-xml
 
+RUN cd /snabar_core/bin && ls
+
 RUN cd /snabar_core/bin && ./gocov test ../src/shopper | ./gocov-xml > ../coverage.xml
