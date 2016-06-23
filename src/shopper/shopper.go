@@ -44,3 +44,8 @@ func (s *Shopper ) Update() error {
 	d := db_helper.SharedConnection()
 	return d.Update(s).Error
 }
+
+// Hack to get this module working first time
+func main() {
+
+}
