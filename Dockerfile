@@ -12,10 +12,5 @@ ENV GOPATH=/snabar_core/
 
 RUN go get
 
-RUN go get github.com/axw/gocov
+RUN go test
 
-RUN go install github.com/axw/gocov
-
-RUN cd /snabar_core/bin && ls
-
-RUN cd /snabar_core/bin && ./gocov test ../src/shopper | ./gocov-xml > ../coverage.xml
