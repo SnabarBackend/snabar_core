@@ -6,7 +6,7 @@ EXPOSE 8081 8081
 
 ADD . /snabar_service
 
-WORKDIR /snabar_service/src/main
+WORKDIR /snabar_service/src/shopper
 
 RUN pwd
 
