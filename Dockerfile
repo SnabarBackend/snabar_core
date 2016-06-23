@@ -10,7 +10,7 @@ WORKDIR /snabar_service/src
 
 ENV GOPATH=/snabar_service/
 
-RUN cd main/
+RUN cd /snabar_service/src/main/
 
 RUN go get
 
