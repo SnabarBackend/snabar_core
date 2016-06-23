@@ -6,8 +6,12 @@ EXPOSE 8081 8081
 
 ADD . /snabar_service
 
-RUN cd /snabar_service/src/main
+WORKDIR /snabar_service
 
 ENV GOPATH=/snabar_service/
 
-CMD ["go","run", "src/main/route.go"]
+RUN go get
+
+RUN go test ./..
+
+CMD ["go","run", "/snabar_service/src/main/route.go"]
