@@ -16,4 +16,4 @@ RUN cd /snabar_service/src/shopper
 
 RUN go get
 
-RUN go test ../..
+RUN go test
