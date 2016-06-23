@@ -2,15 +2,15 @@ FROM golang:1.6
 
 MAINTAINER Akash
 
-ADD . /snabar_service
+ADD . /snabar_core
 
-WORKDIR /snabar_service/src/shopper
+WORKDIR /snabar_core/src/shopper
 
 RUN pwd
 
-ENV GOPATH=/snabar_service/
+ENV GOPATH=/snabar_core/
 
-RUN cd /snabar_service/src/shopper
+RUN cd /snabar_core/src/shopper
 
 RUN go get
 
